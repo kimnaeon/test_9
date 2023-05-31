@@ -32,11 +32,11 @@ if (typeof DeviceMotionEvent.requestPermission === 'function') {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(rotationX,rotationY,rotationZ);
+  background(255);
 }
 
 function draw() {
-  fill(255)
+  fill(rotationX,rotationY,rotationZ)
 
   // we can use rotationZ, rotationX and rotationY
   // they should be used in this order (apparently - see docs)
@@ -51,10 +51,9 @@ function draw() {
   // motion affected circle
   circle(xMotion, yMotion, zMotion)
   // reference circle
-  stroke(255)
-  strokeWeight(3)
-  noFill()
-  noStroke();
+  stroke(0);
+  strokeWeight(3);
+  noFill();
 
   // text to provide instructions and
   // document values at the top of the screen
